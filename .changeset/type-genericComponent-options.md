@@ -1,0 +1,1 @@
+kuma-ui/Vue": patch

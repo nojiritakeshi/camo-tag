@@ -50,6 +50,8 @@ export const Camo = genericComponent()({
 })
 
 function genericComponent() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment -- FIXME
+  // @ts-ignore -- FIXME
   return (options: ComponentOptions<MakeProps>) => defineComponent(options)
 }
 
