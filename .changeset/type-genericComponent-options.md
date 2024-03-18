@@ -1,1 +1,4 @@
-kuma-ui/Vue": patch
+---
+'camo-tag/Vue': patch
+'camo-tag/React': patch
+---
