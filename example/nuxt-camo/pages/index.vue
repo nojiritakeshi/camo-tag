@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Camo } from 'camo-tag/packages/Vue/src'
+import { Camo } from 'camo-tag/packages/vue/src'
 const isOnly = ref(true)
 const isAll = ref(false)
 const btnColor = ref<'red' | 'blue'>('red')
