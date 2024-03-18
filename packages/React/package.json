@@ -1,0 +1,59 @@
+{
+  "name": "@camo-tag/react",
+  "version": "0.1.0",
+  "description": "react",
+  "keywords": [
+    "react",
+    "css",
+    "front-end",
+    "design-system"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --composite false",
+    "lint": "eslint './src/**/*.{js,ts,jsx,tsx}' --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint --fix './src/**/*.{js,ts,jsx,tsx}' --report-unused-disable-directives --max-warnings 0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.32",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@vitest/coverage-c8": "^0.31.4",
+    "globby": "^13.2.0",
+    "jsdom": "^22.1.0",
+    "ts-node": "^10.9.1",
+    "vitest": "^0.31.4"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.0.32",
+    "next": ">=13.4.5",
+    "react": ">=18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

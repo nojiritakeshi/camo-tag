@@ -1,0 +1,67 @@
+name: testing
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "packages/**"
+      - ".github/workflows/main.yml"
+  workflow_dispatch:
+jobs:
+  test:
+    name: Node ${{ matrix.node_version }} testing on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: [18, 20]
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node_version: ${{ matrix.node_version }}
+
+      - name: Run test
+        run: pnpm test
+
+      - name: Build packages
+        run: pnpm build
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node_version: 18
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Run lint
+        run: pnpm lint
+
+      - name: Run format
+        run: pnpm format
+
+  changeset:
+    name: check changeset status
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node_version: 18
+
+      - name: Run changeset status
+        run: pnpm changeset status --since origin/main
