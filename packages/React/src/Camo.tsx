@@ -27,7 +27,6 @@ const Camo: CamoComponent = forwardRef(({ as = 'div', children, ...props }, ref)
   if (cacheChildren.length > 0) {
     return React.createElement(elementType, attribute, cacheChildren)
   }
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- FIXME
   return React.createElement(as, { ref, ...excludeUniqueAttributeProps }, children)
 })
 
@@ -49,7 +48,6 @@ function processIsAllChildren(children: ReactNode, cacheChildren: ReactNode[]) {
     }
     const typedChild = child as CamoChildren
     if (typedChild.props?.children) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- FIXME
       if (typedChild.props[IS_SURVIVOR]) {
         // Remove is-survivor from child.props.
         const clone = React.cloneElement(typedChild, {
