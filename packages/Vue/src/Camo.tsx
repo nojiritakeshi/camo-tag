@@ -11,8 +11,8 @@ import {
 import { IS_ONLY, IS_SURVIVOR, V_IS_ALL, V_IS_ONLY, V_IS_SURVIVOR } from './constants'
 import { MakeProps, CamoChildren } from './type'
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call -- FIXME
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- FIXME
 export const Camo = genericComponent()({
   name: 'Camo',
   inheritAttrs: false,
@@ -69,7 +69,7 @@ function processIsAllChildren(children: CamoChildren, cacheChildren: VNode[]) {
   if (typeof children === 'string' || children == null) return
   for (const child of [...children]) {
     if (child.children) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- FIXME
       if (child.props && (child.props[V_IS_SURVIVOR] || child.props[IS_SURVIVOR])) {
         const props = {
           ...child.props,
