@@ -4,7 +4,8 @@
   "description": "Special tags that can freely render only certain tags while leaving child elements intact.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nojiritakeshi/camo-tag.git"
+    "url": "git+https://github.com/nojiritakeshi/camo-tag.git",
+    "directory": "packages/vue"
   },
   "keywords": [
     "vue",
