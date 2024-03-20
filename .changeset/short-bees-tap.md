@@ -1,6 +1,6 @@
 ---
-'@camo-tag/react': major
-'@camo-tag/vue': major
+'@camo-tag/react': minor
+'@camo-tag/vue': minor
 ---
 
 release
