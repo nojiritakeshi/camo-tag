@@ -29,7 +29,7 @@ At present it has the following features.
 </Camo>
 ```
 
-- The final result is as follows.
+The final result is as follows.
 
 ```react
 <h1>Home</h1>
@@ -53,7 +53,7 @@ At present it has the following features.
 </Camo>
 ```
 
-- The final result is as follows.
+The final result is as follows.
 
 ```react
 <div>
@@ -68,7 +68,7 @@ Contributions are welcome.
 
 If you find a problem or a feature you would like to see, please write an Issue!
 
-Pull requests are also welcome! Let's build something better together! 🥷.
+Pull requests are also welcome! Let's build something better together! 🥷
 
 ## Licence
 
