@@ -4,14 +4,6 @@ camo is a special tag that allows you to freely render only specific tags while 
 
 ## 💻 Installation
 
-- React
-
-```sh
-npm install @camo-tag/react
-```
-
-- Vue
-
 ```sh
 npm install @camo-tag/vue
 ```
