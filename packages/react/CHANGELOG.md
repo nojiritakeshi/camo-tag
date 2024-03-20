@@ -1,5 +1,12 @@
 # @camo-tag/react
 
+## 1.0.0
+
+### Major Changes
+
+- [`a7ae6a1`](https://github.com/nojiritakeshi/camo-tag/commit/a7ae6a17bd4c4afeebd7cc49b57410f4406549ca) Thanks
+  [@nojiritakeshi](https://github.com/nojiritakeshi)! - release
+
 ## 0.2.0
 
 ### Minor Changes
