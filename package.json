@@ -1,6 +1,6 @@
 {
   "name": "camo-tag",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Special tags that can freely render only certain tags while leaving child elements intact.",
   "scripts": {
     "bootstrap": "pnpm install",
