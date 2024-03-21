@@ -1,7 +1,6 @@
+<script setup lang="ts"></script>
 <template>
   <div>
-    <V-app>
-      <NuxtPage />
-    </V-app>
+    <NuxtPage />
   </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Camo } from 'camo-tag/packages/vue/src'
+import { Camo } from '@camo-tag/vue'
 const isOnly = ref(true)
 const isAll = ref(false)
 const btnColor = ref<'red' | 'blue'>('red')
@@ -17,7 +17,7 @@ const btnColor = ref<'red' | 'blue'>('red')
       </div>
     </Camo>
     <p v-if="isOnly">Gooodd</p>
-    <v-btn @click="isOnly = !isOnly" :color="btnColor">Toggle</v-btn>
+    <button @click="isOnly = !isOnly" :color="btnColor">Toggle</button>
   </div>
   <Camo as="main" :is-all="isAll">
     <h1>Home</h1>
