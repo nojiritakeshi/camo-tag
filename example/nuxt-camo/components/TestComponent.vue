@@ -15,6 +15,6 @@ const BClick = () => {
 
 <template>
   <div>
-    <v-btn @click="BClick" :color="btnColor">Toggle</v-btn>
+    <button @click="BClick" :color="btnColor">Toggle</button>
   </div>
 </template>
