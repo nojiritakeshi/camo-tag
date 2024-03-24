@@ -19,10 +19,10 @@ At present it has the following features.
   - Child elements of `camo` have the same functionality as `camo`, as shown in the following example.
 
 ```react
-<Camo as="main" :is-only="true">
+<Camo as="main" is-only={true}>
   <h1>Home</h1>
   <p>Hoge</p>
-  <div :is-only="true">
+  <div is-only={true}>
     <h2 style="color: red">Sub Title</h2>
     <TestComponent />
   </div>
@@ -43,10 +43,10 @@ The final result is as follows.
   - Elements surrounded by `is-survivor` protect against is-all.
 
 ```react
-<Camo as="main" :is-all="isAll">
+<Camo as="main" is-all={isAll}>
   <h1>Home</h1>
   <p>Hoge</p>
-  <div :is-survivor="true">
+  <div is-survivor={true}>
     <h2 style="color: red">Sub Title</h2>
     <TestComponent />
   </div>
